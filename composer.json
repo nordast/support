@@ -12,6 +12,6 @@
     "autoload":{
       "files":[ "helpers.php" ]
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {}
 }
