@@ -1,0 +1,17 @@
+{
+    "name": "exfriend/support",
+    "description": "Debug helpers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladislav Otchenashev",
+            "email": "i@zlad.tk"
+        }
+    ],
+    "autoload":{
+      "files":[ "helpers.php" ]
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
