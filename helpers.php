@@ -5,7 +5,7 @@
 // --[ Debug ]------------------------------------------------------
 // ---------------------------------------------------------------------
 
-function xprint( $param, $title = 'Debug info' )
+function xp( $param, $title = 'Debug info' )
 {
   ini_set( 'xdebug.var_display_max_depth', 50 );
   ini_set( 'xdebug.var_display_max_children', 25600 );
@@ -61,5 +61,6 @@ function xd( $val, $title = null )
     xprint( $val, $title );
   else
     xprint( $val );
-  die();
+//  die();
+  exit;
 }
