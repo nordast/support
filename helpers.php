@@ -64,3 +64,4 @@ function xd( $val, $title = null )
 //  die();
   exit;
 }
+
