@@ -1,1 +1,1 @@
-xprint and xd functions
+xp and xd functions for debug
