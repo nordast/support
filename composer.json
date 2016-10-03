@@ -3,7 +3,6 @@
     "description": "Debug helpers",
     "type": "library",
     "license": "MIT",
-    "version": "2.0.2",
     "authors": [
         {
             "name": "Vladislav Otchenashev",
