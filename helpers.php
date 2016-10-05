@@ -5,23 +5,19 @@
 // --[ Debug ]------------------------------------------------------
 // ---------------------------------------------------------------------
 
-function xp( $param, $title = 'Debug info' )
+function xprint($param, $title = 'Debug info')
 {
-  ini_set( 'xdebug.var_display_max_depth', 50 );
-  ini_set( 'xdebug.var_display_max_children', 25600 );
-  ini_set( 'xdebug.var_display_max_data', 9999999999 );
-  if ( PHP_SAPI == 'cli' )
-  {
-    echo "\n---------------[ $title ]---------------\n";
-    echo print_r( $param, true );
-    echo "\n-------------------------------------------\n";
-  }
-  else
-  {
-?>
+    ini_set('xdebug.var_display_max_depth', 50);
+    ini_set('xdebug.var_display_max_children', 25600);
+    ini_set('xdebug.var_display_max_data', 9999999999);
+    if (PHP_SAPI == 'cli') {
+        echo "\n---------------[ $title ]---------------\n";
+        echo print_r($param, true);
+        echo "\n-------------------------------------------\n";
+    } else {
+        ?>
         <style>
-            .xprint-wrapper
-            {
+            .xprint-wrapper {
                 padding: 10px;
                 margin-bottom: 25px;
                 color: black;
@@ -34,8 +30,7 @@ function xp( $param, $title = 'Debug info' )
                 width: 80%;
             }
 
-            .xprint-title
-            {
+            .xprint-title {
                 padding-top: 1px;
                 color: #000;
                 background: #ddd;
@@ -50,18 +45,31 @@ function xp( $param, $title = 'Debug info' )
         </style>
         <div class="xprint-wrapper">
         <div class="xprint-title"><?= $title ?></div>
-        <pre style="color:#000;"><?= htmlspecialchars( print_r( $param, true ) ) ?></pre>
+        <pre style="color:#000;"><?= htmlspecialchars(print_r($param, true)) ?></pre>
         </div><?php
-  }
+    }
 }
 
-function xd( $val, $title = null )
+function xp($param, $title = 'Debug info')
 {
-  if($title)
-    xp( $val, $title );
-  else
-    xp( $val );
-//  die();
-  exit;
+    xprint($param, $title);
+}
+
+function xd($val, $title = null)
+{
+    if ($title)
+        xp($val, $title);
+    else
+        xp($val);
+    die();
+}
+
+function xe($val, $title = null)
+{
+    if ($title)
+        xp($val, $title);
+    else
+        xp($val);
+    exit;
 }
 
